@@ -1,0 +1,22 @@
+/* Estilo Base para o Item (apenas para referência) */
+.item {
+    border-left: 5px solid transparent; /* Adiciona uma borda inicial transparente para a cor de aviso */
+    transition: border-left 0.3s ease; /* Transição suave na mudança de cor */
+}
+ 
+/* 🟢 Status: Criado/ Conteúdo Atualizado */
+.item.status-ok {
+    border-left-color: #28a745; /* Verde */
+}
+
+/* 🟡 Status: Atenção / Próximo da Revisão (Ex: nos últimos 30 dias) */
+.item.status-atencao {
+    border-left-color: #ffc107; /* Amarelo */
+}
+ 
+/* 🔴 Status: Vencido / Revisão Obrigatória */
+.item.status-vencido {
+    border-left-color: #dc3545; /* Vermelho */
+
+
+}

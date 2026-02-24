@@ -1,0 +1,9 @@
+.item-subtitle {
+    font-size: 12px; /* Tamanho da fonte */
+    color: #666; /* Cor do texto */
+    margin-top: 2px; /* Espaçamento superior */
+    font-family: sans-serif; /* Fonte sans-serif */
+    display: inline-flex; /* Mantém ícone e texto na mesma linha */
+    align-items: center; /* Alinha verticalmente */
+    gap: 2px; /* Espaço entre ícone e texto */
+}

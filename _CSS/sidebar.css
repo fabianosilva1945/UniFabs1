@@ -1,0 +1,17 @@
+
+    .sidebar{
+      width:var(--sidebar-w);
+      background:linear-gradient(180deg,var(--bg),#071122);
+      color:#fff;
+      padding:20px;
+      display:flex;f
+      flex-direction:column;
+      gap:18px;
+      box-shadow:2px 0 12px rgba(2,6,23,0.25);
+      border-radius:0 14px 14px 0;
+      position:relative;
+      z-index:20;
+    }
+
+    /*No CSS, sidebar geralmente se refere a uma barra lateral usada para navegação ou informações adicionais, 
+    posicionada à esquerda ou à direita do conteúdo principal da página.*/

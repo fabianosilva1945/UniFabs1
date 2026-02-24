@@ -1,0 +1,49 @@
+ .app{
+      display:flex;
+      min-height:100vh;
+      align-items:stretch;
+    }
+
+
+    /*ajuste da barra lateral*/
+
+
+     <!-- NO - RESULTS - QUANDO NÃO TENHO RSULTADO APRESENTA A MENSAGEM-->             
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/no-results.css">
+
+                <!-- menu-->
+                <!-- Esta relacionado ao menu colocando o fundo e as descrições-->
+                 <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/menu2.css">
+
+                <!-- INPUT -->
+                <!-- MOVIMENTA A BARRA DE PESQUISA PARA OS LADOS  -->
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_CSS/input-group.css">
+                <!-- MOVIMENTA A BARRA DE PESQUISA - ICONE  -->
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/input-icon.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/input-field.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/input-field-focus.css">
+
+                <!-- itens - AJUSTE DOI QUADRO CENTRAL QUE ACOMODA OS ITENS-->
+                 <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/itens.css">
+
+                <!-- item-->
+                <!-- cOLOCA AS DESCRIÇÕES DE FORMA LATERAL A IMAGEM-->
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item.css">
+                
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-title.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-description.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-subtitle.css">
+                <!--AJUSTA O TAMNHO DAS IMAGEM DEIXANDO AS MENORES -->
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-image img.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-content.css">
+                <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/item-subtitle-span.css">
+       
+
+                 <!-- menu-->
+                  <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/calendario2.css">
+
+                <!-- sub-menu-->
+                 <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/revisao.css">
+
+                <!-- sub-menu-->
+                 <link rel="stylesheet" href="C:\Users\uni11673\OneDrive - unimedbh\DEFINITIVA\site\_novo_html\_base/_css/sub-menu.css">

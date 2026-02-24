@@ -1,0 +1,16 @@
+.item-description
+{
+    
+    color: #000;
+    padding: 2px 0; /* Corrige 'Padding' com P maiúsculo */
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    display: block;
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+    width: auto; /* Remove largura fixa */
+    height: auto; /* Remove altura fixa */
+    margin: 0; /* Remove todo espaço */
+
+
+}

@@ -1,0 +1,9 @@
+.item
+{
+    display: flex;/* Define um layout flexível */
+    flex-direction: row; /* Alinha os itens em uma linha horizontal */  
+    gap: 12px;/* Espaçamento entre os itens */
+
+}
+
+/*Deixa a imagem sobre e o nome embaixo*/

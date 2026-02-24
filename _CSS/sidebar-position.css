@@ -1,0 +1,33 @@
+/* Responsividade simples */
+    @media (max-width:880px)
+    {
+      .sidebar
+      {
+        position:fixed;
+        left:0;
+        top:0;
+        height:100vh;
+        transform:translateX(-110%);
+        transition:transform .28s ease;
+      }
+      .sidebar.open
+      {
+        transform:translateX(0)
+      }
+      .overlay
+      {
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.35);
+        display:none
+      }
+      .overlay.show
+      {
+        display:block
+      }
+      .main
+      {
+        padding:18px
+      }
+    }
+ 

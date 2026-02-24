@@ -1,0 +1,7 @@
+.input-field:focus
+{
+    outline: none;/* Remove a borda padrão do navegador ao focar no campo de entrada */
+    border-color: #707b86; /* Altera a cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Adiciona um efeito de sombra ao focar */
+       
+}

@@ -1,0 +1,18 @@
+.input-icon
+{
+    display: flex; /* Alinha o ícone e o campo de entrada na mesma linha */
+    align-items: Center; /* Centraliza a lupa verticalmente */
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o ícone e o campo de entrada */
+    background-color: #f0f0f0; /* Cor de fundo */
+    min-width: 32px; /* Largura mínima */
+    min-height: 32px; /* Altura mínima */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    background-color: #19830f; /* Cor de fundo */
+    color: #ffffff;/* Cor do ícone */
+    
+}
+
+/*Esta relacionado ao quadro azul ao lado da lupa*/

@@ -1,0 +1,14 @@
+.input-field
+{
+    width: 1000px; /* Defina a largura desejada ou seja a marcação de quanidade descrita  */
+    padding: 8px; /* Espaçamento interno */
+    border: none; /* Remover borda padrão */
+    background-color: transparent;  /* Fundo transparente */
+    font-size: 16px; /* Tamanho da fonte */
+    
+
+}
+
+
+
+/* Ajusta a parte interna da pesquisa, um contorno em azul ao clicar!*/

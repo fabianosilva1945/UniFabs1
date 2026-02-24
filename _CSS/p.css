@@ -1,0 +1,16 @@
+p{
+	text-align: center;/*Centraliza o texto horizontalmente dentro da área.*/
+	color: black; /* Define a cor do texto como preto */
+}
+.white-text {
+    color: white;       /* Cor branca */
+}
+.red-text {
+    color: rgb(128, 24, 24);       /* Cor branca */
+}
+.green-text {
+    color: rgb(10, 94, 21);       /* Cor branca */
+}
+.grap-text {
+    color: rgb(74, 9, 87);       /* Cor branca */
+}

@@ -1,0 +1,8 @@
+.item-title
+{
+    font-size: 18px;/* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    color: #333;/* Cor do texto */
+    margin: 0; /* Remove margens padrão */
+    font-family: sans-serif;/* Define a fonte como sans-serif */
+}

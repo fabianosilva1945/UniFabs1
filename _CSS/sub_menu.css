@@ -1,0 +1,11 @@
+  .submenu
+  {
+    padding-left:34px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    margin-top:6px}
+    .submenu a
+    {
+      font-size:13px;
+      padding:8px}

@@ -1,0 +1,137 @@
+/* Estilo do Container do Calendário */
+.calendar-container {
+    position: fixed; /* Fixa na tela */
+    top: 10px; /* Distância do topo da topo da tela */
+    right: 10px; /* Distância da lateral direita da tela */
+    width: 240px; /* Largura reduzida para 200px */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    z-index: 99; /* Garante que fique acima do conteúdo principal */
+}
+ 
+/* O restante do CSS permanece o mesmo */
+/* Estilo do Cabeçalho (Mês/Ano e Botões) */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+ 
+#currentMonthYear {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+ 
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0056b3; /* Azul mais escuro */
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+ 
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+ 
+/* Estilo da Tabela/Grid de Dias */
+.calendar-days, .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas, uma para cada dia */
+    text-align: center;
+    font-size: 14px;
+}
+ 
+.day-name {
+    font-weight: bold;
+    color: #555;
+    padding: 4px 0;
+}
+ 
+/* Estilo dos Números dos Dias */
+.day {
+    padding: 6px 0;
+    cursor: pointer; /* Importante: Indica que o dia é clicável */
+    border-radius: 50%;
+    margin: 2px;
+    position: relative; /* Necessário para posicionar o marcador de evento */
+    transition: background-color 0.1s;
+}
+ 
+.day.current-month {
+    color: #333;
+}
+ 
+.day.current-month:hover {
+    background-color: #f0f0f0;
+}
+ 
+.day.today {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+ 
+.day.today:hover {
+    background-color: #0056b3;
+}
+ 
+.day.other-month {
+    color: #ccc; /* Dias do mês anterior/próximo */
+    cursor: default; /* Não clicável */
+}
+ 
+/* --- NOVOS ESTILOS PARA MARCAÇÃO DE EVENTO --- */
+ 
+.event-marker {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+ 
+/* Cores dos eventos */
+.bg-red-event { background-color: #ef4444; }    /* Vermelho: Urgente */
+.bg-yellow-event { background-color: #f59e0b; } /* Amarelo: Atenção */
+.bg-green-event { background-color: #10b981; }  /* Verde: Normal/OK */
+ 
+/* Estilos da Legenda */
+.legend-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #555;
+}
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.legend-item .marker {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+ 

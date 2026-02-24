@@ -1,0 +1,142 @@
+/* Estilo do Container do Calendário */
+
+.calendar-container {
+
+    position: fixed; /* Fixa na tela */
+
+    top: 10px; /* Distância do topo da tela */
+
+    right: 10px; /* Distância da lateral direita da tela */
+
+    width: 250px; /* Largura pequena para o calendário */
+
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    padding: 10px;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 99; /* Garante que fique acima do conteúdo principal */
+
+}
+ 
+/* Estilo do Cabeçalho (Mês/Ano e Botões) */
+
+.calendar-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #eee;
+
+}
+ 
+#currentMonthYear {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #333;
+
+}
+ 
+.nav-button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    color: #007bff;
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+}
+ 
+.nav-button:hover {
+
+    background-color: #f0f0f0;
+
+}
+ 
+/* Estilo da Tabela/Grid de Dias */
+
+.calendar-days, .calendar-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas, uma para cada dia */
+
+    text-align: center;
+
+    font-size: 12px;
+
+}
+ 
+.day-name {
+
+    font-weight: bold;
+
+    color: #555;
+
+    padding: 4px 0;
+
+}
+ 
+/* Estilo dos Números dos Dias */
+
+.day {
+
+    padding: 6px 0;
+
+    cursor: default; /* Pode mudar para pointer se for clicável */
+
+    border-radius: 50%;
+
+    margin: 2px;
+
+}
+ 
+.day.current-month {
+
+    color: #333;
+
+}
+ 
+.day.today {
+
+    background-color: #007bff;
+
+    color: white;
+
+    font-weight: bold;
+
+}
+ 
+.day.other-month {
+
+    color: #ccc; /* Dias do mês anterior/próximo */
+
+}
+ 

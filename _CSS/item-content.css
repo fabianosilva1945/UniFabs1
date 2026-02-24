@@ -1,0 +1,6 @@
+.item-content {
+    display: flex;/* Define um contêiner flexível */
+    flex-direction: column;/* Alinha os itens em coluna */
+    gap: 4px; /* Espaço entre título, subtítulo e descrição */
+    flex: 1; /* Ocupa todo espaço disponível */
+}

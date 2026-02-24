@@ -1,0 +1,38 @@
+.menu
+{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    gap:6px
+}
+    .menu a
+    {
+        display:flex;
+        gap:10px;
+        align-items:center;
+        padding:10px;
+        border-radius:8px;
+        color:#d8e3ef;
+        text-decoration:none;
+        font-size:14px
+    }
+    .menu a .icon
+    {
+        width:20px;
+        height:20px;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        opacity:.9
+    }
+    .menu a:hover
+    {
+        background:rgba(255,255,255,0.04)
+    }
+    .menu a.active
+    {
+        background:linear-gradient(90deg,var(--accent),#06b6d4);
+        color:#012028;
+        font-weight:600}

@@ -1,0 +1,6 @@
+#no_results
+{
+    display: none;/* Esconde o elemento por padrão */
+    text-align: center;/* Centraliza o texto */
+     font-family: sans-serif;/* Define a fonte como sans-serif */
+}

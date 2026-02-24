@@ -1,0 +1,449 @@
+/* body.css (corrigido) */
+/*O que é :root no CSS? :root é um pseudo-seletor que representa o elemento raiz do documento, ou seja, o <html>.
+Ele é muito usado para definir variáveis CSS globais (custom properties), porque tudo dentro de :root fica disponível para toda a página.
+Por que usar :root?
+Centraliza configurações (cores, fontes, espaçamentos).
+Facilita manutenção: muda uma cor no :root e ela se atualiza em todo o site.
+Ajuda na responsividade: você pode alterar variáveis com media queries.
+*/
+:root {
+  --page-bg: url('C:/Users/uni11673/OneDrive - unimedbh/DEFINITIVA/site/_novo_imagem/_icones/_B/_background/IMG_BACK_0000.jpg');
+  --text-color: #222;
+}
+
+
+
+
+
+/*RESET - Esse reset é considerado boa prática moderna e está presente em frameworks como Bootstrap.*/
+
+*,/*É o seletor universal: aplica a regra para todos os elementos da página.*/
+*::before, /*São pseudo-elementos usados para inserir conteúdo antes ou depois de um elemento (muito usados para ícones, efeitos, etc.).*/
+*::after { /*São pseudo-elementos usados para inserir conteúdo antes ou depois de um elemento (muito usados para ícones, efeitos, etc.).*/
+  box-sizing: border-box; /*Define como o tamanho total do elemento é calculado. Com border-box, padding e borda são incluídos dentro da largura e altura do elemento.
+Isso evita cálculos complicados e problemas de layout.*/
+}
+
+
+
+
+
+html {
+  /* Ajuda em layouts responsivos e Mobile */
+  font-size: 16px;
+}
+
+
+
+
+
+body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: var(--page-bg);
+        background-image: url('./assets/img/IMG_BACK_0000.jpg'); /* use caminho relativo */
+        color: var(--text-color);
+  /* REMOVIDO: padding sem unidade, z-index -1, margin-bottom %, width/height redundantes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('C:/Users/uni11673/OneDrive - unimedbh/DEFINITIVA/site/_novo_imagem/_icones/_B/_background/IMG_BACK_0000.jpg'); /*Imagem de fundo*/
+    font-family: Arial, sans-serif; /*Identifica o tipo de fonte utilizada no corpo da pagina*/
+	/*height:100%; */
+	/*width: 100%; */
+	margin-bottom:58%; /*Empurra todo o conteúdo para fora da tela, causando sobreposição.*/
+    /*background-color: #362100;*//*Indica a cor de fundo*/
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: bottom; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+	 z-index: -1; /* Garante que o conteúdo do body fique acima da imagem */
+
+}
+
+
+
+
+
+.main-wrapper /*O seletor .main-wrapper é uma classe CSS, Ele permite aplicar grid layout e espaçamentos de forma controlada, 
+                sem mexer diretamente no body.Evita colocar regras complexas no body (que deve ficar mais “limpo”).
+                Dá flexibilidade para organizar conteúdo em colunas ou linhas.
+                Facilita aplicar responsividade (media queries, espaçamentos adaptativos).*/
+{
+  display: grid;/*Isso permite organizar os elementos internos em linhas e colunas com controle preciso.*/
+  grid-template-columns: 1fr;/*Define uma única coluna que ocupa todo o espaço disponível (1fr = 1 fração do espaço).*/
+  gap: 1rem;/*Define o espaçamento entre os itens do grid (tanto linhas quanto colunas). 1rem = tamanho relativo à fonte raiz (normalmente 16px).*/
+  padding: clamp(0.75rem, 1.5vw, 1.25rem);/*Usa a função clamp() para tornar o padding responsivo:
+                                            Mínimo: 0.75rem (≈12px)
+                                            Ideal: 1.5vw (1,5% da largura da tela)
+                                            Máximo: 1.25rem (≈20px)
+                                            Isso significa que o espaçamento interno do container se adapta ao tamanho da tela, 
+                                            mas nunca fica menor que 12px nem maior que 20px.*/
+}
+
+
+
+
+
+.has-sidebar .content /* Quando a sidebar estiver visível e ocupando espaço fixo, a área de conteúdo ganha margem à esquerda */
+{
+  margin-left: clamp(220px, 22vw, 300px);
+}
+
+
+
+
+
+@media /*O @media no CSS é usado para criar media queries, que são regras condicionais que aplicam estilos somente quando certas 
+            condições são atendidas, geralmente relacionadas ao tamanho da tela ou tipo de dispositivo.
+            Tornar o layout responsivo.
+            Aplicar estilos diferentes para desktop, tablet, celular.
+            Ajustar fontes, espaçamentos, colunas, esconder/mostrar elementos conforme a largura da tela.
+            max-width → aplica até certo tamanho (ex.: celular)
+            Tipo de condição
+                min-width → aplica a partir de certo tamanho (ex.: desktop)
+                orientation → retrato ou paisagem
+                print → estilos para impressão*/
+(max-width: 992px) /*Quando a largura da tela é menor ou igual a 992px (tablet ou telas médias), ajusta a margem esquerda do conteúdo.*/
+{
+  .has-sidebar .content {
+    margin-left: clamp
+    (
+        180px, 
+        28vw, 
+        220px
+        )
+        ;
+    /*Usa clamp() para definir um valor responsivo:
+        mínimo: 180px
+        ideal: 28vw (28% da largura da tela)
+        máximo: 220px*/
+  }
+}
+
+
+
+
+
+
+@media 
+(max-width: 576px) /*Quando a largura da tela é menor ou igual a 576px (celular), remove a margem esquerda.*/
+{
+  .has-sidebar .content 
+  {
+    margin-left: 0; /* menu vira overlay em mobile */
+  }
+}
+
+/*
+992px → Ajusta para tablets (sidebar ainda visível, mas menor).
+576px → Ajusta para celulares (sidebar vira overlay, conteúdo ocupa toda a tela).
+Extra grande (XL) → ≥1200px
+Monitores grandes, desktops widescreen.
+Grande (LG) → ≥992px e <1200px
+Desktops padrão e notebooks.
+Médio (MD) → ≥768px e <992px
+Tablets na horizontal.
+Pequeno (SM) → ≥576px e <768px
+Tablets na vertical e celulares grandes.
+Extra pequeno (XS) → <576px
+Celulares.
+*/
+
+
+
+
+
+
+ .app{
+      display:flex;
+      min-height:100vh;
+      align-items:stretch;
+    }
+
+
+
+
+     .brand
+ {
+    display:flex;
+    align-items:center;
+    gap:12px
+}
+    .brand .logo
+    {
+        width:40px;
+        height:40px;
+        border-radius:8px;
+        background:rgba(255,255,255,0.06);
+        display:flex;
+        align-items:center;
+        justify-content:center;font-weight:700}
+    .brand h1
+    {
+        font-size:
+        16px;margin:0;
+        letter-spacing:.2px
+    }
+    .brand p
+    {
+        margin:0;
+        font-size:12px;
+        color:var(--muted)
+    }
+
+/* ########## CALENDARIO   ########## */
+/* Estilo do Container do Calendário */
+.calendar-container {
+    position: fixed; /* Fixa na tela */
+    top: 10px; /* Distância do topo da topo da tela */
+    right: 10px; /* Distância da lateral direita da tela */
+    width: 240px; /* Largura reduzida para 200px */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    z-index: 99; /* Garante que fique acima do conteúdo principal */
+}
+ 
+/* O restante do CSS permanece o mesmo */
+/* Estilo do Cabeçalho (Mês/Ano e Botões) */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+ 
+#currentMonthYear {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+ 
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0056b3; /* Azul mais escuro */
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+ 
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+ 
+/* Estilo da Tabela/Grid de Dias */
+.calendar-days, .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas, uma para cada dia */
+    text-align: center;
+    font-size: 14px;
+}
+ 
+.day-name {
+    font-weight: bold;
+    color: #555;
+    padding: 4px 0;
+}
+ 
+/* Estilo dos Números dos Dias */
+.day {
+    padding: 6px 0;
+    cursor: pointer; /* Importante: Indica que o dia é clicável */
+    border-radius: 50%;
+    margin: 2px;
+    position: relative; /* Necessário para posicionar o marcador de evento */
+    transition: background-color 0.1s;
+}
+ 
+.day.current-month {
+    color: #333;
+}
+ 
+.day.current-month:hover {
+    background-color: #f0f0f0;
+}
+ 
+.day.today {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+ 
+.day.today:hover {
+    background-color: #0056b3;
+}
+ 
+.day.other-month {
+    color: #ccc; /* Dias do mês anterior/próximo */
+    cursor: default; /* Não clicável */
+}
+ 
+/* --- NOVOS ESTILOS PARA MARCAÇÃO DE EVENTO --- */
+ 
+.event-marker {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+ 
+/* Cores dos eventos */
+.bg-red-event { background-color: #ef4444; }    /* Vermelho: Urgente */
+.bg-yellow-event { background-color: #f59e0b; } /* Amarelo: Atenção */
+.bg-green-event { background-color: #10b981; }  /* Verde: Normal/OK */
+ 
+/* Estilos da Legenda */
+.legend-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #555;
+}
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.legend-item .marker {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+/* ################################################################ CALENDARIO  ############################################################################## */
+
+
+
+/* ############################################### MENSAGEM DE NÃO ENCONTRA RESULTADOS   ################################################################### */
+#no_results
+{
+    display: none;/* Esconde o elemento por padrão */
+    text-align: center;/* Centraliza o texto */
+     font-family: sans-serif;/* Define a fonte como sans-serif */
+}
+/* ############################################### MENSAGEM DE NÃO ENCONTRA RESULTADOS   ################################################################### */
+ 
+
+/* #################################################    Estilo para a barra lateral   ########################################################################*/
+.sidebar {
+    height: 100%; /* 100% de altura */
+    width: 25; /* Começa com largura zero (fechado) */
+    position: fixed; /* Fixa na tela */
+    z-index: 100; /* Fica por cima de outros elementos */
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    top: 0;
+    left: 0;
+    background-color: #06351b; /* Cor de fundo escura */
+    padding-top: 60px; /* Espaço no topo */
+    overflow-x: hidden; /* Desabilita rolagem horizontal */
+    transition: 0.5s; /* 0.5 segundos de efeito de transição ao abrir/fechar */
+
+  
+
+}
+ 
+/* Links dentro da barra lateral */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f8f6f3;
+    display: block;
+    transition: 0.3s;
+}
+ 
+/* Mudança de cor ao passar o mouse */
+.sidebar a:hover {
+    color: #2550dd;
+}
+ 
+/* Botão de fechar (x) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+ 
+/* Estilo para o botão de abrir */
+.openbtn {
+    font-size: 20px;/*fonte do open menu*/
+    cursor: pointer;
+    background-color: #06351b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; /* Mantém ele visível */
+    top: 10px;
+    left: 10px;
+    z-index: 90;
+}
+ 
+/* Estilo para o conteúdo principal */
+#main {
+    transition: margin-left .5s; /* Transição suave */
+    padding: 16px;
+}
+ 
+/* Media Queries para telas menores */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 15px;}
+}
+
+* Estilo para o botão que abre o submenu */
+.dropdown-btn 
+{     /* Mantém o mesmo estilo dos outros links, mas você pode adicionar algo diferente se quiser */
+    padding: 8px 8px 8px 32px;   
+    text-decoration: none;     
+    font-size: 15px;     
+    color: #818181;    
+    display: block;     
+    transition: 0.3s;     
+    cursor: pointer; 
+} 
+/* Oculta o conteúdo do submenu por padrão */
+.dropdown-container 
+{     
+    display: none;     
+    background-color: #262626; 
+    /* Uma cor um pouco mais escura que o fundo do menu */
+    padding-left: 8px; 
+} 
+
+
+/* Estilo para os links dentro do submenu */
+.dropdown-container a 
+{    
+     padding: 6px 6px 6px 45px;
+     /* Mais indentação para diferenciar */
+     font-size: 15px; /* Fonte um pouco menor */
+    background-color: #06351b;
+     color: #bbb; 
+    } /* Estilo para a seta (careta) */
+     .fa-caret-down 
+     { 
+        float: right; 
+        padding-right: 8px; }
+
+/* #################################################    Estilo para a barra lateral   ########################################################################*/

@@ -1,0 +1,22 @@
+body
+
+{
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('C:/Users/uni11673/OneDrive - unimedbh/DEFINITIVA/site/_novo_imagem/_icones/_B/_background/IMG_BACK_0000.jpg'); /*Imagem de fundo*/
+    font-family: Arial, sans-serif; /*Identifica o tipo de fonte utilizada no corpo da pagina*/
+    margin: 0; /**/
+    padding:500; /*CSS exige unidade (px, %, rem). Sem isso, a regra é ignorada.  padding:500; */
+	height:100%; /**/
+	width: 100%; /**/
+	margin-bottom:58%; /*Empurra todo o conteúdo para fora da tela, causando sobreposição.*/
+    /*background-color: #362100;*//*Indica a cor de fundo*/
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: bottom; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+	 z-index: -1; /* Garante que o conteúdo do body fique acima da imagem */
+
+}
+

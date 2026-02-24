@@ -1,0 +1,103 @@
+/* Estilo para a barra lateral */
+.sidebar {
+    height: 100%; /* 100% de altura */
+    width: 25; /* Começa com largura zero (fechado) */
+    position: fixed; /* Fixa na tela */
+    z-index: 100; /* Fica por cima de outros elementos */
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    top: 0;
+    left: 0;
+    background-color: #06351b; /* Cor de fundo escura */
+    padding-top: 60px; /* Espaço no topo */
+    overflow-x: hidden; /* Desabilita rolagem horizontal */
+    transition: 0.5s; /* 0.5 segundos de efeito de transição ao abrir/fechar */
+
+  
+
+}
+ 
+/* Links dentro da barra lateral */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f8f6f3;
+    display: block;
+    transition: 0.3s;
+}
+ 
+/* Mudança de cor ao passar o mouse */
+.sidebar a:hover {
+    color: #2550dd;
+}
+ 
+/* Botão de fechar (x) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+ 
+/* Estilo para o botão de abrir */
+.openbtn {
+    font-size: 20px;/*fonte do open menu*/
+    cursor: pointer;
+    background-color: #06351b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; /* Mantém ele visível */
+    top: 10px;
+    left: 10px;
+    z-index: 90;
+}
+ 
+/* Estilo para o conteúdo principal */
+#main {
+    transition: margin-left .5s; /* Transição suave */
+    padding: 16px;
+}
+ 
+/* Media Queries para telas menores */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 15px;}
+}
+
+* Estilo para o botão que abre o submenu */
+.dropdown-btn 
+{     /* Mantém o mesmo estilo dos outros links, mas você pode adicionar algo diferente se quiser */
+    padding: 8px 8px 8px 32px;   
+    text-decoration: none;     
+    font-size: 15px;     
+    color: #818181;    
+    display: block;     
+    transition: 0.3s;     
+    cursor: pointer; 
+} 
+/* Oculta o conteúdo do submenu por padrão */
+.dropdown-container 
+{     
+    display: none;     
+    background-color: #262626; 
+    /* Uma cor um pouco mais escura que o fundo do menu */
+    padding-left: 8px; 
+} 
+
+
+/* Estilo para os links dentro do submenu */
+.dropdown-container a 
+{    
+     padding: 6px 6px 6px 45px;
+     /* Mais indentação para diferenciar */
+     font-size: 15px; /* Fonte um pouco menor */
+    background-color: #06351b;
+     color: #bbb; 
+    } /* Estilo para a seta (careta) */
+     .fa-caret-down 
+     { 
+        float: right; 
+        padding-right: 8px; }

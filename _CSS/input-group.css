@@ -1,0 +1,21 @@
+.input-group
+{
+   
+    display: flex;
+    background-color: white;
+    padding: 3px 16px 3px 3px;
+    border-radius: 8px;
+    width: 100%; /* ocupa toda a largura disponível */
+    max-width: 1000px; /* Tamanho da barra branca em comprimento */
+    margin-left: -60px; /* gMovimenta a barra baranca para a esquerda */
+    margin-right: auto; /* empurra para a esquerda */
+
+
+
+}
+
+/*Relacionado ao campo de pesquisa*/
+/*parte interna onde é realizado a digiação*/
+
+
+/*align-items: center; /* ALINHAMENTO VERTICAL DO TEXTO DENTRO DO CAMPO DE PESQUISA*/

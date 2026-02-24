@@ -1,0 +1,10 @@
+.item-image img
+{
+    width: 190px;/* Largura fixa para a imagem */
+    height: 120px;/* Altura fixa para a imagem */
+    object-fit: cover;/* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 8px;/* Bordas arredondadas */
+
+}
+
+/* Estilização adicional para o contêiner da imagem, se necessário - se tirar desconfigura todas as imagens */

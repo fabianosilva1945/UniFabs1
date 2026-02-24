@@ -1,0 +1,20 @@
+.itens
+{
+    display: flex;/* DEFINE O TIPO DE LAYOUT FLEXÍVEL*/
+    flex-direction: column;/* DEFINE A DIREÇÃO DOS ITENS NA COLUNA*/
+    gap: 2px;/* ESPAÇO ENTRE OS DOCUMENTOS E QUADRO*/
+    list-style: none;/* REMOVE OS MARCADORES DA LISTA*/
+    padding: 12px;/* ESPAÇO INTERNO DO QUADRO*/
+    /*margin-top: 12px;/* ESPAÇO ENTRE O CAMPO DE PESQUISA E QUADRO*/
+
+    background-color: #95ecc1;/* COR DE FUNDO DO QUADRO*/
+    border: 2px solid #000000;/* COR DA BORDA DO QUADRO*/
+    border-radius: 12px;/* CURVATURA DA BORDA*/
+    width: 1000px; /* AUMETA A LARGURA DO TAMANHO DO QUADRO*/
+    height: 600PX; /* AUMETA A ALTURA DO TAMANHO DO QUADRO*/
+    overflow-y: auto;/**/
+
+    
+    position: relative; /* Define a posição relativa */    
+    left: -61px; /* Ajusta a posição para a esquerda */
+}

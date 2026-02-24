@@ -1,0 +1,6 @@
+
+item-subtitle span {
+    white-space: normal; /* Permite quebra de linha na descrição */
+    display: inline-block;/*
+    max-width: 300px; /* Ajuste conforme necessário */
+}
